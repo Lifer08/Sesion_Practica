@@ -107,7 +107,7 @@ CREATE TABLE Alumnos (
 );
 ```
 📌 Este paso crea la estructura base de la BD.
-➤ Haz clic en "Ejecutar" para que DB-Fiddle cree las tablas.
+> Haz clic en "Ejecutar" para que DB-Fiddle cree las tablas.
 
 ---
 
@@ -139,7 +139,7 @@ INSERT INTO Alumnos (alumno_id, nombre, apellido, semestre, licenciatura_id) VAL
 ## 🔍 6. Paso 3: Ejecutar Consultas (Query SQL)
 Ahora ve al panel Query SQL (lado derecho) y prueba las siguientes consultas.
 
-### **Consulta A: Ver todas las licenciaturas**
+### **Consulta geeral**
 
 ```sql
 -- CONSULTA: Obtener el nombre completo, semestre y la licenciatura de cada alumno.
@@ -158,10 +158,31 @@ ORDER BY
 
 ---
 
-## ✅ 8. Evidencia a entregar
+## 8. Agregar datos
+## Cómo agregar datos nuevos a la tabla
+
+Para agregar datos nuevos solo debes seguir estos pasos:
+
+- Situarte en el ***Schema SQL***.
+- Escribir un comando `INSERT INTO ... VALUES(...)` con los valores de los nuevos registros (alumnos, licenciaturas, etc.).
+- Ejecutar el comando para insertar los datos en la tabla.
+
+### Ejemplo: agregar un alumno nuevo
+
+```sql
+INSERT INTO Alumnos (alumno_id, nombre, apellido, semestre, licenciatura_id) 
+VALUES (6, 'Nombre', 'Apellido', 1, 100);
+```
+
+> Ingresa tu Nombre y Apellido en el sitio correspondiente 
+
+
+---
+
+## ✅ 9. Evidencia a entregar
 
 En el Forms deberás subir:
 
-* Una captura de pantalla de DB-Fiddle mostrando el resultado de la **Consulta**.
+* Una captura de pantalla de DB-Fiddle mostrando el resultado de la **Consulta general** con tus datos, después de haber agregado un alumno nuevo.
 
 ---
