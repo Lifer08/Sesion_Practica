@@ -35,6 +35,10 @@ SQL es el lenguaje estándar para administrar bases de datos relacionales: permi
 * **DML (Data Manipulation Language)**: manipula datos.
   Ejemplo: `INSERT`, `UPDATE`, `SELECT`
 
+- **Puedes aprender más de estos conceptos en el siguiente link:** 
+https://www.w3schools.com/sql/sql_ref_database.asp 
+
+
 ---
 
 ## 🏫 2. Contexto de la actividad
@@ -86,17 +90,20 @@ Aquí se escriben las consultas para obtener información.
 
 En el panel *Schema SQL* pega lo siguiente:
 
+- TABLA 1: LICENCIATURAS (CARRERAS)
+- Permanece igual.
+
 ```sql
--- TABLA 1: LICENCIATURAS (CARRERAS)
--- Permanece igual.
+
 CREATE TABLE Licenciaturas (
     licenciatura_id INT PRIMARY KEY,
     nombre_licenciatura VARCHAR(150) NOT NULL,
     facultad VARCHAR(100)
 );
-
--- TABLA 2: ALUMNOS (MODIFICADA: SIN MATRÍCULA)
--- Usamos 'alumno_id' como clave primaria.
+```
+- TABLA 2: ALUMNOS (MODIFICADA: SIN MATRÍCULA)
+- Usamos 'alumno_id' como clave primaria.
+```sql
 CREATE TABLE Alumnos (
     alumno_id INT PRIMARY KEY, -- Nuevo campo de identificación
     nombre VARCHAR(50) NOT NULL,
@@ -115,15 +122,18 @@ CREATE TABLE Alumnos (
 
 Coloca este código debajo del anterior (en el mismo panel Schema SQL):
 
+- INSERCIÓN DE DATOS en Licenciaturas (FMAT - UADY)
 ```sql
--- INSERCIÓN DE DATOS en Licenciaturas (FMAT - UADY)
+
 INSERT INTO Licenciaturas (licenciatura_id, nombre_licenciatura, facultad) VALUES
 (100, 'Ingeniería de Software', 'FMAT - UADY'),
 (200, 'Licenciatura en Matemáticas', 'FMAT - UADY'),
 (300, 'Licenciatura en Actuaría', 'FMAT - UADY'),
 (400, 'Licenciatura en Ciencia de Datos', 'FMAT - UADY');
+```
 
--- INSERCIÓN DE DATOS en Alumnos con los nombres solicitados
+- INSERCIÓN DE DATOS en Alumnos con los nombres solicitados
+```sql
 INSERT INTO Alumnos (alumno_id, nombre, apellido, semestre, licenciatura_id) VALUES
 (1, 'Adrián', 'Cab', 5, 100),       -- Ingeniería de Software
 (2, 'Gabriel', 'Cuadros', 3, 200),  -- Licenciatura en Matemáticas
@@ -141,8 +151,9 @@ Ahora ve al panel Query SQL (lado derecho) y prueba las siguientes consultas.
 
 ### **Consulta geeral**
 
+- CONSULTA: Obtener el nombre completo, semestre y la licenciatura de cada alumno.
 ```sql
--- CONSULTA: Obtener el nombre completo, semestre y la licenciatura de cada alumno.
+
 SELECT
     A.nombre,
     A.apellido,
@@ -184,5 +195,7 @@ VALUES (6, 'Nombre', 'Apellido', 1, 100);
 En el Forms deberás subir:
 
 * Una captura de pantalla de DB-Fiddle mostrando el resultado de la **Consulta general** con tus datos, después de haber agregado un alumno nuevo.
+
+https://forms.gle/T2t1yzTNdYTgkVMb9
 
 ---

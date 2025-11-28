@@ -1,0 +1,32 @@
+-- TABLA 1: LICENCIATURAS (CARRERAS)
+-- Permanece igual.
+CREATE TABLE Licenciaturas (
+    licenciatura_id INT PRIMARY KEY,
+    nombre_licenciatura VARCHAR(150) NOT NULL,
+    facultad VARCHAR(100)
+);
+
+-- TABLA 2: ALUMNOS (MODIFICADA: SIN MATRÍCULA)
+-- Usamos 'alumno_id' como clave primaria.
+CREATE TABLE Alumnos (
+    alumno_id INT PRIMARY KEY, -- Nuevo campo de identificación
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    semestre INT NOT NULL,
+    licenciatura_id INT,
+    FOREIGN KEY (licenciatura_id) REFERENCES Licenciaturas(licenciatura_id)
+);
+-- INSERCIÓN DE DATOS en Licenciaturas (FMAT - UADY)
+INSERT INTO Licenciaturas (licenciatura_id, nombre_licenciatura, facultad) VALUES
+(100, 'Ingeniería de Software', 'FMAT - UADY'),
+(200, 'Licenciatura en Matemáticas', 'FMAT - UADY'),
+(300, 'Licenciatura en Actuaría', 'FMAT - UADY'),
+(400, 'Licenciatura en Ciencia de Datos', 'FMAT - UADY');
+
+-- INSERCIÓN DE DATOS en Alumnos con los nombres solicitados
+INSERT INTO Alumnos (alumno_id, nombre, apellido, semestre, licenciatura_id) VALUES
+(1, 'Adrián', 'Cab', 5, 100),       -- Ingeniería de Software
+(2, 'Gabriel', 'Cuadros', 3, 200),  -- Licenciatura en Matemáticas
+(3, 'Lucy', 'Fernández', 7, 100),   -- Ingeniería de Software
+(4, 'Diego', 'Pérez', 1, 300),      -- Licenciatura en Actuaría
+(5, 'Santiago', 'Valdez', 5, 400);   -- Licenciatura en Ciencia de Datos
