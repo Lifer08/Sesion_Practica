@@ -205,7 +205,7 @@ DROP TABLE IF EXISTS Alumnos;
 DROP TABLE IF EXISTS Licenciaturas;
 ```
 ## 12. Mostrar tabla codigo:
-'''sql
+```sql
 SELECT 
     A.alumno_id,
     A.nombre,
