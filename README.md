@@ -189,8 +189,34 @@ VALUES (6, 'Nombre', 'Apellido', 1, 100);
 
 
 ---
+## 9. Llevar tu base de datos a SQL Online (otra plataforma)
+Entra a:
+👉 https://sqliteonline.com/
+## 10.
+En la parte izquierda, selecciona:
+File → New → SQLite
 
-## ✅ 9. Evidencia a entregar
+En la ventana de SQL, pega todo el código DDL + DML que hiciste en el README / fiddle:
+
+## 11. 
+Codigo para resolver error:
+DROP TABLE IF EXISTS Alumnos;
+DROP TABLE IF EXISTS Licenciaturas;
+
+## 12. Mostrar tabla codigo:
+SELECT 
+    A.alumno_id,
+    A.nombre,
+    A.apellido,
+    A.semestre,
+    L.nombre_licenciatura,
+    L.facultad
+FROM Alumnos A
+JOIN Licenciaturas L
+    ON A.licenciatura_id = L.licenciatura_id;
+
+
+## ✅ 13. Evidencia a entregar
 
 En el Forms deberás subir:
 
