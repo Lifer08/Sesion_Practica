@@ -200,10 +200,12 @@ En la ventana de SQL, pega todo el código DDL + DML que hiciste en el README / 
 
 ## 11. 
 Codigo para resolver error:
+```sql
 DROP TABLE IF EXISTS Alumnos;
 DROP TABLE IF EXISTS Licenciaturas;
-
+```
 ## 12. Mostrar tabla codigo:
+'''sql
 SELECT 
     A.alumno_id,
     A.nombre,
@@ -214,7 +216,7 @@ SELECT
 FROM Alumnos A
 JOIN Licenciaturas L
     ON A.licenciatura_id = L.licenciatura_id;
-
+```
 
 ## ✅ 13. Evidencia a entregar
 
